@@ -147,10 +147,6 @@ button {
   opacity: 1;
 }
 
-.first {
-  color: #404bbf;
-}
-
 .logotype {
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -686,6 +682,7 @@ button {
 }
 
 .modal-form-title {
+  display: block;
   margin-top: 72px;
   font-weight: 500;
   font-size: 16px;
@@ -710,7 +707,10 @@ button {
   height: 40px;
   width: 100%;
   padding: 8px 16px;
+  padding-left: 38px;
 
+  color: var(--dark-grey);
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
@@ -724,6 +724,9 @@ button {
   resize: none;
   padding: 8px 16px;
 
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
@@ -736,13 +739,36 @@ button {
   outline: none;
 }
 
+.modal-wrapper,
+.modal-check-wrapper {
+  position: relative;
+}
+
 .modal-icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+
+  fill: var(--dark-grey);
+
+  transition: fill var(--animation);
+}
+
+.modal-input:focus ~ .modal-icon {
+  fill: var(--primary-brand);
+}
+
+.modal-check-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(25%, 50%);
+
   fill: var(--dark-grey);
 }
 
 .checkbox-group {
   display: flex;
-  margin-bottom: 24px;
 }
 
 .checkbox-input {
@@ -750,6 +776,7 @@ button {
   height: 16px;
   margin-right: 8px;
 
+  background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
 }
@@ -757,6 +784,7 @@ button {
 .checkbox-group .policy {
   line-height: 1.33em;
   color: var(--primary-brand);
+  text-decoration-line: underline;
 }
 
 .modal-send-button {
