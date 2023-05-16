@@ -246,14 +246,13 @@ button {
 }
 
 .button {
-  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
 
-.order {
+.order-button {
   color: #fff;
   background-color: var(--primary-brand);
   min-width: 169px;
@@ -268,12 +267,12 @@ button {
   transition: background-color var(--animation);
 }
 
-.order:focus,
-.order:hover {
+.order-button:focus,
+.order-button:hover {
   background-color: var(--pressed-state);
 }
 
-.filter {
+.filter-button {
   color: var(--primary-brand);
   background-color: var(--cloud);
   min-width: 60px;
@@ -285,15 +284,15 @@ button {
   transition: color var(--animation), background-color var(--animation), border-color var(--animation), box-shadow var(--animation);
 }
 
-.filter:focus,
-.filter:hover {
+.filter-button:focus,
+.filter-button:hover {
   color: #fff;
   background-color: var(--pressed-state);
   border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.subscribe {
+.subscribe-button {
   color: #fff;
   background-color: var(--primary-brand);
   min-width: 165px;
@@ -306,8 +305,8 @@ button {
   transition: background-color var(--animation);
 }
 
-.subscribe:focus,
-.subscribe:hover {
+.subscribe-button:focus,
+.subscribe-button:hover {
   background-color: var(--pressed-state);
 }
 
@@ -665,4 +664,118 @@ button {
 .modal-close:focus .modal-close-icon,
 .modal-close:hover .modal-close-icon {
   fill: #ffffff;
+}
+
+.modal-form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto;
+
+  width: 360px;
+}
+
+.modal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.modal-form-title {
+  margin-top: 72px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark-grey);
+}
+
+.modal-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17em;
+  letter-spacing: 0.01em;
+
+  color: var(--light-slate);
+}
+
+.modal-input {
+  margin-top: 4px;
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: 8px 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+}
+
+.modal-input-comment {
+  display: block;
+  height: 120px;
+  width: 100%;
+  resize: none;
+  padding: 8px 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+}
+
+.modal-input:focus,
+.modal-input-comment:focus {
+  border: 1px solid var(--primary-brand);
+  outline: none;
+}
+
+.modal-icon {
+  fill: var(--dark-grey);
+}
+
+.checkbox-group {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.checkbox-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+}
+
+.checkbox-group .policy {
+  line-height: 1.33em;
+  color: var(--primary-brand);
+}
+
+.modal-send-button {
+  display: block;
+  margin: 24px auto;
+  padding: 16px 32px;
+  width: 169px;
+  height: 56px;
+
+  border: none;
+  color: var(--white);
+  background: var(--primary-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color var(--animation);
+}
+
+.modal-send-button:focus,
+.modal-send-button:hover {
+  background-color: var(--pressed-state);
 }
