@@ -289,13 +289,15 @@ button {
 }
 
 .subscribe-button {
-  color: #fff;
-  background-color: var(--primary-brand);
   min-width: 165px;
   height: 40px;
-  border: none;
   padding: 8px 24px;
+  text-align: left;
+
+  border: none;
   border-radius: 4px;
+  color: var(--white);
+  background-color: var(--primary-brand);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color var(--animation);
@@ -482,12 +484,17 @@ button {
 }
 
 .subscribe-form {
+  position: relative;
   margin-left: 80px;
 }
 
 .subscribe-flex {
   display: flex;
   gap: 24px;
+}
+
+.subsribe-wrap {
+  position: relative;
 }
 
 .subscribe-input {
@@ -499,9 +506,7 @@ button {
   border: 1px solid #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-}
 
-.subscribe-input-text {
   font-weight: 400;
   font-size: 12px;
   line-height: 2em;
@@ -509,8 +514,23 @@ button {
   color: var(--white);
 }
 
+/* .subscribe-input-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2em;
+  letter-spacing: 0.04em;
+  color: var(--white);
+} */
+
 .subscribe-icon {
-  /* margin-left: 16px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 30%);
 }
 
 .works-section {
@@ -764,14 +784,20 @@ button {
   left: 0px;
   transform: translate(25%, 50%);
 
-  fill: var(--dark-grey);
+  fill: transparent;
+
+  transition: fill var(--animation);
 }
 
 .checkbox-group {
   display: flex;
+  align-items: center;
 }
 
 .checkbox-input {
+  appearance: none;
+  display: block;
+
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -779,6 +805,17 @@ button {
   background-color: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+
+  transition: background-color var(--animation), border-color var(--animation);
+}
+
+.checkbox-input:checked {
+  background-color: var(--pressed-state);
+  border-color: var(--pressed-state);
+}
+
+.checkbox-input:checked ~ .modal-check-icon {
+  fill: var(--white);
 }
 
 .checkbox-group .policy {
