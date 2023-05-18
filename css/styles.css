@@ -308,6 +308,11 @@ button {
   background-color: var(--pressed-state);
 }
 
+.subscribe-icon {
+  position: absolute;
+  margin-left: 16px;
+}
+
 .footer {
   background-color: var(--dark-grey);
   padding-top: 100px;
@@ -493,10 +498,6 @@ button {
   gap: 24px;
 }
 
-.subsribe-wrap {
-  position: relative;
-}
-
 .subscribe-input {
   background-color: transparent;
 
@@ -512,25 +513,31 @@ button {
   line-height: 2em;
   letter-spacing: 0.04em;
   color: var(--white);
+
+  transition: border-color var(--animation);
 }
 
-/* .subscribe-input-text {
+.subscribe-input-text {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 48px;
+  left: 18px;
 
   font-weight: 400;
   font-size: 12px;
   line-height: 2em;
   letter-spacing: 0.04em;
   color: var(--white);
-} */
 
-.subscribe-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-100%, 30%);
+  transition: color var(--animation);
+}
+
+.subscribe-input:focus {
+  outline: none;
+  border: 1px solid var(--primary-brand);
+}
+
+.subscribe-input:focus ~ .subscribe-input-text {
+  color: transparent;
 }
 
 .works-section {
@@ -634,6 +641,8 @@ button {
 
   width: 408px;
   min-height: 576px;
+  padding: 24px;
+  padding-top: 72px;
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -662,13 +671,13 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
 
-  transition: background-color var(--animation), border var(--animation);
+  transition: background-color var(--animation), border-color var(--animation);
 }
 
 .modal-close:focus,
 .modal-close:hover {
   background-color: var(--pressed-state);
-  border: none;
+  border-color: transparent;
 }
 
 .modal-close-icon {
@@ -686,9 +695,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 0 auto;
 
-  width: 360px;
+  margin-bottom: 24px;
 }
 
 .modal-form-group {
@@ -696,14 +704,11 @@ button {
   flex-direction: column;
   gap: 8px;
 
-  padding: 0;
-  margin: 0;
   border: none;
 }
 
 .modal-form-title {
   display: block;
-  margin-top: 72px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5em;
@@ -722,10 +727,10 @@ button {
 }
 
 .modal-input {
-  margin-top: 4px;
   display: block;
   height: 40px;
   width: 100%;
+  margin-top: 4px;
   padding: 8px 16px;
   padding-left: 38px;
 
@@ -742,6 +747,7 @@ button {
   height: 120px;
   width: 100%;
   resize: none;
+  margin-top: 4px;
   padding: 8px 16px;
 
   letter-spacing: 0.04em;
@@ -759,14 +765,13 @@ button {
   outline: none;
 }
 
-.modal-wrapper,
-.modal-check-wrapper {
+.modal-wrapper {
   position: relative;
 }
 
 .modal-icon {
   position: absolute;
-  top: 8px;
+  top: 24px;
   left: 16px;
 
   fill: var(--dark-grey);
@@ -796,7 +801,6 @@ button {
 
 .checkbox-input {
   appearance: none;
-  display: block;
 
   width: 16px;
   height: 16px;
@@ -826,7 +830,7 @@ button {
 
 .modal-send-button {
   display: block;
-  margin: 24px auto;
+  margin: 0 auto;
   padding: 16px 32px;
   width: 169px;
   height: 56px;
