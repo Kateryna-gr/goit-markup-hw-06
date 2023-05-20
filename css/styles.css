@@ -691,15 +691,7 @@ button {
   fill: #ffffff;
 }
 
-.modal-form-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-
-  margin-bottom: 24px;
-}
-
-.modal-form-group {
+.modal-input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -715,6 +707,8 @@ button {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--dark-grey);
+
+  margin-bottom: 16px;
 }
 
 .modal-label {
@@ -771,7 +765,7 @@ button {
 
 .modal-icon {
   position: absolute;
-  top: 24px;
+  top: 26px;
   left: 16px;
 
   fill: var(--dark-grey);
@@ -787,7 +781,7 @@ button {
   position: absolute;
   top: 0px;
   left: 0px;
-  transform: translate(25%, 50%);
+  transform: translate(28%, 50%);
 
   fill: transparent;
 
@@ -797,6 +791,9 @@ button {
 .checkbox-group {
   display: flex;
   align-items: center;
+
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .checkbox-input {
